@@ -1,0 +1,68 @@
+:root {
+  --text: #070724;
+  --background: #ffffff;
+
+  /* breakpoints */
+  --tablet: 768px;
+  --laptop: 1024px;
+  --desktop: 1280px;
+
+  --body-text {
+    font-family: "Spartan", sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  @apply --body-text;
+
+  min-height: 100dvh;
+  max-width: 100dvw;
+  overflow-x: hidden;
+
+  background-color: var(--background);
+  color: var(--text);
+
+  @media (prefers-color-scheme: dark) {
+    --background: var(--text);
+    --text: var(--background);
+  }
+}
+
+h1,
+.as-h1 {
+  font-family: "Antonio", sans-serif;
+  font-size: 80px;
+  line-height: 103px;
+}
+
+h2,
+.as-h2 {
+  font-family: "Antonio", sans-serif;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -1.5;
+}
+
+h3,
+.as-h3 {
+  font-family: "Spartan";
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 2.6;
+}
+
+h4,
+.as-h4 {
+  font-family: Spartan;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 1;
+}
+
+.as-body {
+  font-family: "Spartan", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+}

@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     // baseURL: "http://localhost:3000",
+    baseURL: "/",
   },
   css: ["~/assets/css/reset.css", "~/assets/css/main.css"],
 });

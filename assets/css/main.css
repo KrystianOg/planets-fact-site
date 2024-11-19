@@ -1,19 +1,42 @@
+@font-face {
+  font-family: "Antonio";
+  font-weight: 500;
+  src: url("/fonts/antonio-medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Spartan";
+  font-weight: 700;
+  src: url("/fonts/spartan-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Spartan";
+  font-weight: 400;
+  src: url("/fonts/spartan-regular.woff2") format("woff2");
+}
+
 :root {
   --text: #070724;
   --background: #ffffff;
+  --header-height: 82px;
+  --separator: rgba(255, 255, 255, 0.2);
+  --border: var(--separator);
 
   /* breakpoints */
   --tablet: 768px;
   --laptop: 1024px;
   --desktop: 1280px;
 
-  --body-text {
-    font-family: "Spartan", sans-serif;
-    font-size: 14px;
-    line-height: 25px;
+  @media (prefers-color-scheme: dark) {
+    --text: #ffffff;
+    --background: #070724;
   }
 
-  @apply --body-text;
+  font-family: "Spartan", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
 
   min-height: 100dvh;
   max-width: 100dvw;
@@ -21,16 +44,12 @@
 
   background-color: var(--background);
   color: var(--text);
-
-  @media (prefers-color-scheme: dark) {
-    --background: var(--text);
-    --text: var(--background);
-  }
 }
 
 h1,
 .as-h1 {
   font-family: "Antonio", sans-serif;
+  font-weight: 500;
   font-size: 80px;
   line-height: 103px;
 }
@@ -38,31 +57,44 @@ h1,
 h2,
 .as-h2 {
   font-family: "Antonio", sans-serif;
+  font-weight: 500;
   font-size: 40px;
   line-height: 52px;
-  letter-spacing: -1.5;
+  letter-spacing: -1.5px;
 }
 
 h3,
 .as-h3 {
-  font-family: "Spartan";
+  font-family: "Spartan", sans-serif;
   font-weight: bold;
   font-size: 12px;
   line-height: 25px;
-  letter-spacing: 2.6;
+  letter-spacing: 2.6px;
 }
 
 h4,
 .as-h4 {
-  font-family: Spartan;
+  font-family: Spartan, sans-serif;
   font-weight: bold;
   font-size: 11px;
   line-height: 25px;
-  letter-spacing: 1;
+  letter-spacing: 1px;
 }
 
 .as-body {
   font-family: "Spartan", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
 }

@@ -1,5 +1,6 @@
 export type Planet = {
   name: string;
+  color: string;
   overview: {
     content: string;
     source: string;

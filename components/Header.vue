@@ -1,20 +1,30 @@
-<script setup lang="ts"></script>
 <template>
   <!-- on mobile single row with title and hamburger, on tablet column with title and nav, desktop: row with title and nav -->
   <header>
-    <span class="as-body"></span>
+    <span class="as-h2 title">THE PLANETS</span>
+    <Navigation />
   </header>
 </template>
 <style lang="css" scoped>
 header {
   display: flex;
+  padding: 0 1rem;
+  justify-content: space-between;
+  align-items: center;
 
-  @media screen and (min-width: var(--tablet)) {
+  .title {
+    display: inline-block;
+    text-transform: uppercase;
+  }
+
+  @media only screen and (min-width: 768px) {
     flex-direction: column;
   }
 
-  @media screen and (min-width: var(--laptop)) {
+  @media only screen and (min-width: 1024px) {
     flex-direction: row;
   }
+
+  border-bottom: 1px solid var(--separator);
 }
 </style>
